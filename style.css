@@ -1,0 +1,31 @@
+table {
+    margin-bottom: 20px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.legend {
+    display: block;
+    text-align: left;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+#startButton {
+    display: none;
+    margin-top: 20px;
+}
+
+#resetButton {
+    display: none;
+    margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>時間配分時計</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>時間配分時計</h1>
+        <table id="inputTable" border="1">
+            <thead>
+                <tr>
+                    <th>コンテンツ</th>
+                    <th>分数(5分単位)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 5行の入力フィールド -->
+                <script>
+                    for (let i = 0; i < 5; i++) {
+                        document.write(`
+                    <tr>
+                        <td><input type="text" class="label-input"></td>
+                        <td><input type="number" min="0" max="50" step="5" class="value-input"></td>
+                    </tr>`);
+                    }
+                </script>
+            </tbody>
+        </table>
+
+        <button onclick="generateChart()">作成</button>
+        <button id="startButton" onclick="startClock()">スタート</button>
+        <button id="resetButton" onclick="resetClock()">リセット</button>
+
+        <canvas id="pieChart" width="300" height="300"></canvas>
+        <div id="legend" class="legend"></div>
+        <div id="errorMessage" class="error"></div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
